@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Creativity Fitness</title><link href="../rss.xml" title="Creativity Fitness feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="a7883eb5-2005-4f7e-992c-cedcfdd30687"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>Creativity Fitness</title><link href="../rss.xml" title="Creativity Fitness feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="9e41477c-5b33-43ba-8a4b-e5f8699338d3"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,6 +463,7 @@ ul {
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -480,6 +485,7 @@ ul {
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -493,6 +499,7 @@ ul {
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -506,6 +513,7 @@ ul {
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -519,6 +527,7 @@ ul {
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -532,6 +541,7 @@ ul {
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -545,6 +555,7 @@ ul {
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -557,6 +568,7 @@ ul {
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -573,6 +585,7 @@ ul {
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -587,6 +600,7 @@ ul {
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -625,6 +639,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -646,6 +661,7 @@ display: none;
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -659,6 +675,7 @@ display: none;
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -672,6 +689,7 @@ display: none;
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -685,6 +703,7 @@ display: none;
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -698,6 +717,7 @@ display: none;
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -711,6 +731,7 @@ display: none;
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -723,6 +744,7 @@ display: none;
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -739,6 +761,7 @@ display: none;
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -753,6 +776,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -791,6 +815,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -812,6 +837,7 @@ display: none;
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -825,6 +851,7 @@ display: none;
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -838,6 +865,7 @@ display: none;
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -851,6 +879,7 @@ display: none;
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -864,6 +893,7 @@ display: none;
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -877,6 +907,7 @@ display: none;
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -889,6 +920,7 @@ display: none;
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -905,6 +937,7 @@ display: none;
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -919,6 +952,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 7.684rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -957,6 +991,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -978,6 +1013,7 @@ display: none;
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -991,6 +1027,7 @@ display: none;
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -1004,6 +1041,7 @@ display: none;
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -1017,6 +1055,7 @@ display: none;
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -1030,6 +1069,7 @@ display: none;
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -1043,6 +1083,7 @@ display: none;
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -1055,6 +1096,7 @@ display: none;
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -1071,6 +1113,7 @@ display: none;
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -1085,6 +1128,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 11.524rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -1123,6 +1167,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -1144,6 +1189,7 @@ display: none;
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -1157,6 +1203,7 @@ display: none;
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -1170,6 +1217,7 @@ display: none;
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -1183,6 +1231,7 @@ display: none;
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -1196,6 +1245,7 @@ display: none;
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -1209,6 +1259,7 @@ display: none;
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -1221,6 +1272,7 @@ display: none;
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -1237,6 +1289,7 @@ display: none;
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -1251,6 +1304,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -1289,6 +1343,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav .group.heading { background-color: rgb(46, 31, 35); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-nav a:active { color: rgb(0, 0, 0); }
@@ -1310,6 +1365,7 @@ display: none;
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a { color: rgb(188, 188, 188); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .text.quote a:hover { color: rgb(138, 138, 138); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual > .decoration.separator { color: rgb(255, 255, 255); }
+#u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 .group.textual { background-color: rgb(31, 31, 31); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a { color: rgb(202, 202, 202); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:hover { color: rgb(0, 0, 0); }
 #u-531beb3c-5b7e-4d96-bad0-b355c7566675#u-531beb3c-5b7e-4d96-bad0-b355c7566675 a:active { color: rgb(0, 0, 0); }
@@ -1323,6 +1379,7 @@ display: none;
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a { color: rgb(202, 202, 202); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:hover { color: rgb(0, 0, 0); }
 #u-ce508121-cd8e-4719-8f04-2dfc81660374#u-ce508121-cd8e-4719-8f04-2dfc81660374 a:active { color: rgb(0, 0, 0); }
@@ -1336,6 +1393,7 @@ display: none;
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb .group.column { background-color: rgb(31, 31, 31); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a { color: rgb(202, 202, 202); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:hover { color: rgb(0, 0, 0); }
 #u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb#u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb a:active { color: rgb(0, 0, 0); }
@@ -1349,6 +1407,7 @@ display: none;
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote { color: rgb(242, 242, 242); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a { color: rgb(188, 188, 188); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation > .text.quote a:hover { color: rgb(138, 138, 138); }
+#u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 .group.quotation { background-color: rgb(31, 31, 31); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a { color: rgb(202, 202, 202); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:hover { color: rgb(0, 0, 0); }
 #u-13239627-7794-4544-9021-ca96e9e80190#u-13239627-7794-4544-9021-ca96e9e80190 a:active { color: rgb(0, 0, 0); }
@@ -1362,6 +1421,7 @@ display: none;
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 .group.column { background-color: rgb(31, 31, 31); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a { color: rgb(202, 202, 202); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:hover { color: rgb(0, 0, 0); }
 #u-15ae04ac-5303-412c-925e-35ea4dac2b52#u-15ae04ac-5303-412c-925e-35ea4dac2b52 a:active { color: rgb(0, 0, 0); }
@@ -1375,6 +1435,7 @@ display: none;
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 .group.column { background-color: rgb(31, 31, 31); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a { color: rgb(202, 202, 202); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:hover { color: rgb(0, 0, 0); }
 #u-055390a0-262c-4454-a966-f17eb9db86e3#u-055390a0-262c-4454-a966-f17eb9db86e3 a:active { color: rgb(0, 0, 0); }
@@ -1387,6 +1448,7 @@ display: none;
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph { color: rgb(242, 242, 242); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 .group.column { background-color: rgb(31, 31, 31); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a { color: rgb(202, 202, 202); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:hover { color: rgb(0, 0, 0); }
 #u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19#u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19 a:active { color: rgb(0, 0, 0); }
@@ -1403,6 +1465,7 @@ display: none;
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph { color: rgb(242, 242, 242); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a { color: rgb(188, 188, 188); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed > .text.paragraph a:hover { color: rgb(138, 138, 138); }
+#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa .group.mixed { background-color: rgb(31, 31, 31); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a { color: rgb(202, 202, 202); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:hover { color: rgb(0, 0, 0); }
 #u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa#u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa a:active { color: rgb(0, 0, 0); }
@@ -1417,6 +1480,7 @@ display: none;
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline { color: rgb(251, 251, 208); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading > .title.headline a:hover { color: rgb(249, 240, 193); }
+#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate .group.heading { background-color: rgb(46, 32, 31); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a { color: rgb(253, 253, 232); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:hover { color: rgb(0, 0, 0); }
 #u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate#u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate a:active { color: rgb(0, 0, 0); }
@@ -1502,7 +1566,7 @@ display: none;
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack quotation i w_quote w_text w_short_quote w_short_text w_icon w_decoration stack quotation" itemid="ce508121-cd8e-4719-8f04-2dfc81660374" itemtype="quote" diff_index="3" index="quotation" kind="stack" score="1" tag="article" id="u-ce508121-cd8e-4719-8f04-2dfc81660374"><div kind="group" index="quotation" class="group quotation group quotation" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation"><blockquote kind="text" index="quote" class="text-decoration short short_quote short_text text quote vfld-leader vfld-trailer text quote" specificity="0.25" itemprop="quote" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote"><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-cinema-svg"></use></svg></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-desktop-svg"></use></svg></div>&#x2015; <strong>Carl Sandburg</strong><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-mobile-svg"></use></svg></div></blockquote></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="7a6dad5d-ff2a-4250-bf22-aa4a96577bdb" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb"><div kind="group" index="column" class="group column group column" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb-g-column-t-paragraph"><p><span class="first-letter">O</span>ne of the trickiest things about time management is <wbr class="w480 w960"></wbr>there are two kinds of time: <wbr class="w481 w961 w1799"></wbr>objective time and <wbr class="w480 w960 w1800"></wbr>subjective time. Objective time is measured by the clock <wbr class="w480 w960"></wbr>and <wbr class="w481 w961 w1799"></wbr>calendar, and subjective time is our experience of <wbr class="w1800"></wbr>it. <wbr class="w480 w960"></wbr>Some days, time passes slowly <wbr class="w481 w961 w1799"></wbr>and other days we <wbr class="w480 w960"></wbr>wonder where the afternoon went. You close your eyes <wbr class="w480 w960"></wbr>for <wbr class="w1800"></wbr>a <wbr class="w481 w961 w1799"></wbr>minute and the time on the clock says an hour just <wbr class="w480 w960"></wbr>passed. Your husband says you <wbr class="w481 w961 w1799"></wbr>can have 10 minutes in <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>shop, yet comes looking for you after three.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s you get older, time passes more quickly. As a child, <wbr class="w480 w960"></wbr>summer stretches on for <wbr class="w481 w961 w1799"></wbr>months. As an adult, you <wbr class="w480 w960"></wbr>cannot <wbr class="w1800"></wbr>believe it is Christmas already. Watching the <wbr class="w480 w960"></wbr>clock <wbr class="w481 w961 w1799"></wbr>at work makes it tick by even more slowly. Being <wbr class="w480 w960"></wbr>immersed <wbr class="w1800"></wbr>in a good book can pass <wbr class="w481 w961 w1799"></wbr>the whole weekend in <wbr class="w480 w960"></wbr>an instant.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack quotation i w_quote w_text w_short_quote w_short_text w_icon w_decoration stack quotation" itemid="13239627-7794-4544-9021-ca96e9e80190" itemtype="quote" diff_index="3" index="quotation" kind="stack" score="1" tag="article" id="u-13239627-7794-4544-9021-ca96e9e80190"><div kind="group" index="quotation" class="group quotation group quotation" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation"><blockquote kind="text" index="quote" class="text-decoration short short_quote short_text text quote vfld-leader vfld-trailer text quote" specificity="0.25" itemprop="quote" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote"><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-cinema-svg"></use></svg></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-desktop-svg"></use></svg></div>Combine our subjective view of time <wbr class="w480 w960"></wbr>with an inability <wbr class="w961"></wbr>to <wbr class="w481 w1799"></wbr>accurately gauge <wbr class="w480 w960 w1800"></wbr>how long the task will take, and you <wbr class="w480 w481 w960 w961 w1799"></wbr>can see why time management is an <wbr class="w480 w960 w1800"></wbr>impossible dream.<div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-mobile-svg"></use></svg></div></blockquote></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="15ae04ac-5303-412c-925e-35ea4dac2b52" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52"><div kind="group" index="column" class="group column group column" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52-g-column-t-paragraph"><p><span class="first-letter">P</span>sychologist Neil Fiore has developed something called <wbr class="w480 w960"></wbr>the un-schedule. Instead of <wbr class="w481 w961 w1799"></wbr>blocking out time on the <wbr class="w480 w960 w1800"></wbr>calendar for projects we are working on, he suggests <wbr class="w480 w960"></wbr>first <wbr class="w481 w961 w1799"></wbr>scheduling everything else we know we have to do, <wbr class="w480 w960 w1800"></wbr>including laundry, cooking, <wbr class="w481 w961 w1799"></wbr>cleaning up afterwards, <wbr class="w480 w960"></wbr>eating, travelling, working out, walking the dog, visiting <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>friends and so on. People soon realise there is a lot less <wbr class="w480 w960"></wbr>unstructured time than we <wbr class="w481 w961 w1799"></wbr>first imagined. Fiore also <wbr class="w480 w960 w1800"></wbr>recommends scheduling time for fun; otherwise, we feel <wbr class="w480 w481 w960 w961 w1799"></wbr>stretched and overworked because relaxation gets <wbr class="w480 w960 w1800"></wbr>missed from our busy days.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>O</span>nce your un-schedule is complete, you will soon <wbr class="w480"></wbr>realise <wbr class="w960"></wbr>that instead of visualising <wbr class="w481 w961 w1799"></wbr>large, unfettered <wbr class="w480"></wbr>blocks of <wbr class="w960 w1800"></wbr>time in which to write your novel, you must <wbr class="w480"></wbr>instead <wbr class="w960"></wbr>build <wbr class="w481 w961 w1799"></wbr>more margin around the edges, segment <wbr class="w480"></wbr>tasks into <wbr class="w960 w1800"></wbr>15-minute blocks and steal time <wbr class="w481 w961 w1799"></wbr>wherever <wbr class="w480"></wbr>possible.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="055390a0-262c-4454-a966-f17eb9db86e3" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-055390a0-262c-4454-a966-f17eb9db86e3"><div kind="group" index="column" class="group column group column" id="u-055390a0-262c-4454-a966-f17eb9db86e3-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-055390a0-262c-4454-a966-f17eb9db86e3-g-column-t-paragraph"><p><span class="first-letter">M</span>ichael Hyatt is a life coach and claims we can shave 10 <wbr class="w480 w960"></wbr>hours off our work week. <wbr class="w481 w1799"></wbr>His <wbr class="w961"></wbr>four strategies include: <wbr class="w480 w960 w1800"></wbr>boosting your energy, guarding your time, sharpening <wbr class="w480 w481 w960 w1799"></wbr>your <wbr class="w961"></wbr>focus and flexing your &#x2018;no&#x2019; muscle. Working long <wbr class="w480 w960 w1800"></wbr>hours use to be a badge of <wbr class="w481 w1799"></wbr>honour, <wbr class="w961"></wbr>we now realise it is a <wbr class="w480 w960"></wbr>fast track to burnout. Getting a good night&#x2019;s sleep, <wbr class="w481 w1799 w1800"></wbr>being <wbr class="w480 w960 w961"></wbr>physically active, staying positive, planning your day, <wbr class="w480 w960"></wbr>choosing focus over <wbr class="w481 w961 w1799"></wbr>multitasking, batching tasks <wbr class="w1800"></wbr>and <wbr class="w480 w960"></wbr>automating &#x2018;no&#x2019; are all strategies Michael <wbr class="w481 w961 w1799"></wbr>recommends <wbr class="w480 w960"></wbr>to build more margin into our work week.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>R</span>ichard Svensson argues in his book <a href="http://amzn.to/1OueJPJ" data-href="http://amzn.to/1OueJPJ"><em>Margin: Restoring <wbr class="w480 w960"></wbr>Emotional, Physical, <wbr class="w1799"></wbr>Financial, <wbr class="w481 w961"></wbr>and Time Reserves to <wbr class="w480 w960 w1800"></wbr>Overloaded Lives</em></a>, that without an indicator light, we <wbr class="w480 w960 w1799"></wbr>don&#x2019;t <wbr class="w481 w961"></wbr>accurately gauge our capacities. We fill our <wbr class="w480 w960 w1800"></wbr>schedules uncritically, and we <wbr class="w1799"></wbr>overbook <wbr class="w481 w961"></wbr>ourselves. We <wbr class="w480 w960"></wbr>need to build space between our load and our limits. We <wbr class="w480 w960 w1799 w1800"></wbr>must hold <wbr class="w481 w961"></wbr>something in reserve for contingencies.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19"><div kind="group" index="column" class="group column group column" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19-g-column-t-paragraph"><p><span class="first-letter">T</span>he combination of portable devices and technology <wbr class="w480 w960"></wbr>make it impossible to <wbr class="w481 w961 w1799"></wbr>disconnect fully. The modern <wbr class="w480 w960 w1800"></wbr>streamlined workforce requires &#x2018;more for less&#x2019;, <wbr class="w1799"></wbr>meaning <wbr class="w480 w481 w960 w961"></wbr>we are busier and more overworked than ever. Society <wbr class="w480 w960 w1800"></wbr>views busyness as a <wbr class="w1799"></wbr>badge of <wbr class="w481 w961"></wbr>honour. Bosses send <wbr class="w480 w960"></wbr>emails to staff on Christmas Eve to show how <wbr class="w1799"></wbr>dedicated <wbr class="w480 w960 w1800"></wbr>they <wbr class="w481 w961"></wbr>are to working right up until holidays. We take our <wbr class="w480 w960"></wbr>laptops to coffee <wbr class="w1799"></wbr>shops, mobile <wbr class="w481 w961"></wbr>devices on cruise ships <wbr class="w480 w960 w1800"></wbr>and parents go back to work as soon as they <wbr class="w1799"></wbr>are able, <wbr class="w480 w481 w960 w961"></wbr>squeezing family time into a few hours at night.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i last_chapter w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text stack mixed" itemid="a2fe976b-bf21-44fe-aa14-0138b44fcdfa" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa"><div kind="group" index="mixed" class="group mixed group mixed" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="693" max-height="400" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-m-cover"><picture id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9e880186a090e8cfb3161db6213b969a/insta_brannan.jpg?height=223&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/749550c597c77b6b8cbfe9712bb2bd43/insta_brannan.jpg?height=333&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/afefbfdc02d77eefbe7199cd1aa0b1b2/insta_brannan.jpg?height=223&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7357ccfc2ca4be8a583376e0d7c8f2ca/insta_brannan.jpg?height=333&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-t-paragraph"><p><span class="first-letter">I</span>t is easy to blame our jobs, families and society as the <wbr class="w480 w960"></wbr>reason we are so busy, but in <wbr class="w481 w961 w1799"></wbr>the end, it is up to <wbr class="w480 w960 w1800"></wbr>individuals to set their limits. For many, it is a paradigm <wbr class="w480 w960"></wbr>shift to <wbr class="w481 w961 w1799"></wbr>slow down, say no, or not do it all. To replace <wbr class="w480 w960 w1800"></wbr>manic multitasking with Zen-like focus <wbr class="w481 w961 w1799"></wbr>is to many, <wbr class="w480 w960"></wbr>myself included, a complete personality overhaul, but it <wbr class="w480 w960"></wbr>is <wbr class="w1800"></wbr>possible. Our <wbr class="w481 w961 w1799"></wbr>attitude toward stress and dizziness is a <wbr class="w480 w960"></wbr>choice. Once you take ownership of that <wbr class="w481 w961 w1799"></wbr>concept, life <wbr class="w480 w960 w1800"></wbr>can be very different.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline-a">Creativity Fitness feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_subtitle w_title w_quote w_text w_separator w_decoration w_leader w_short_subtitle w_short_title w_short_quote w_short_text w_icon w_paragraph w_long_paragraph w_long_text w_cover w_media w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-3-l-one"></div><style id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-color">body{background-color: rgba(32, 22, 21, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_subtitle w_title w_quote w_text w_separator w_decoration w_leader w_short_subtitle w_short_title w_short_quote w_short_text w_icon w_paragraph w_long_paragraph w_long_text w_cover w_media w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-3-l-one"></div><style id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-color">body{background-color: rgba(32, 22, 21, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack quotation i w_quote w_text w_short_quote w_short_text w_icon w_decoration stack quotation" itemid="ce508121-cd8e-4719-8f04-2dfc81660374" itemtype="quote" diff_index="3" index="quotation" kind="stack" score="1" tag="article" id="u-ce508121-cd8e-4719-8f04-2dfc81660374"><div kind="group" index="quotation" class="group quotation group quotation" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation"><blockquote kind="text" index="quote" class="text-decoration short short_quote short_text text quote vfld-leader vfld-trailer text quote" specificity="0.25" itemprop="quote" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote"><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-cinema-svg"></use></svg></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-desktop-svg"></use></svg></div>&#x2015; <strong>Carl Sandburg</strong><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-ce508121-cd8e-4719-8f04-2dfc81660374-g-quotation-t-quote-d-icon-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-mobile-svg"></use></svg></div></blockquote></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="7a6dad5d-ff2a-4250-bf22-aa4a96577bdb" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb"><div kind="group" index="column" class="group column group column" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-7a6dad5d-ff2a-4250-bf22-aa4a96577bdb-g-column-t-paragraph"><p><span class="first-letter">O</span>ne of the trickiest things about time management is <wbr class="w480 w960"></wbr>there are two kinds of time: <wbr class="w481 w961 w1799"></wbr>objective time and <wbr class="w480 w960 w1800"></wbr>subjective time. Objective time is measured by the clock <wbr class="w480 w960"></wbr>and <wbr class="w481 w961 w1799"></wbr>calendar, and subjective time is our experience of <wbr class="w1800"></wbr>it. <wbr class="w480 w960"></wbr>Some days, time passes slowly <wbr class="w481 w961 w1799"></wbr>and other days we <wbr class="w480 w960"></wbr>wonder where the afternoon went. You close your eyes <wbr class="w480 w960"></wbr>for <wbr class="w1800"></wbr>a <wbr class="w481 w961 w1799"></wbr>minute and the time on the clock says an hour just <wbr class="w480 w960"></wbr>passed. Your husband says you <wbr class="w481 w961 w1799"></wbr>can have 10 minutes in <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>shop, yet comes looking for you after three.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>s you get older, time passes more quickly. As a child, <wbr class="w480 w960"></wbr>summer stretches on for <wbr class="w481 w961 w1799"></wbr>months. As an adult, you <wbr class="w480 w960"></wbr>cannot <wbr class="w1800"></wbr>believe it is Christmas already. Watching the <wbr class="w480 w960"></wbr>clock <wbr class="w481 w961 w1799"></wbr>at work makes it tick by even more slowly. Being <wbr class="w480 w960"></wbr>immersed <wbr class="w1800"></wbr>in a good book can pass <wbr class="w481 w961 w1799"></wbr>the whole weekend in <wbr class="w480 w960"></wbr>an instant.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack quotation i w_quote w_text w_short_quote w_short_text w_icon w_decoration stack quotation" itemid="13239627-7794-4544-9021-ca96e9e80190" itemtype="quote" diff_index="3" index="quotation" kind="stack" score="1" tag="article" id="u-13239627-7794-4544-9021-ca96e9e80190"><div kind="group" index="quotation" class="group quotation group quotation" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation"><blockquote kind="text" index="quote" class="text-decoration short short_quote short_text text quote vfld-leader vfld-trailer text quote" specificity="0.25" itemprop="quote" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote"><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-cinema"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-cinema-svg"></use></svg></div><div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-desktop"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-desktop-svg"></use></svg></div>Combine our subjective view of time <wbr class="w480 w960"></wbr>with an inability <wbr class="w961"></wbr>to <wbr class="w481 w1799"></wbr>accurately gauge <wbr class="w480 w960 w1800"></wbr>how long the task will take, and you <wbr class="w480 w481 w960 w961 w1799"></wbr>can see why time management is an <wbr class="w480 w960 w1800"></wbr>impossible dream.<div kind="decoration" index="icon" class="decoration icon decoration icon svg" id="u-13239627-7794-4544-9021-ca96e9e80190-g-quotation-t-quote-d-icon-mobile"><svg viewBox="0 0 72 72" preserveAspectRatio="none"><use xlink:href="#u-531beb3c-5b7e-4d96-bad0-b355c7566675-g-textual-t-quote-d-icon-mobile-svg"></use></svg></div></blockquote></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="15ae04ac-5303-412c-925e-35ea4dac2b52" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52"><div kind="group" index="column" class="group column group column" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-15ae04ac-5303-412c-925e-35ea4dac2b52-g-column-t-paragraph"><p><span class="first-letter">P</span>sychologist Neil Fiore has developed something called <wbr class="w480 w960"></wbr>the un-schedule. Instead of <wbr class="w481 w961 w1799"></wbr>blocking out time on the <wbr class="w480 w960 w1800"></wbr>calendar for projects we are working on, he suggests <wbr class="w480 w960"></wbr>first <wbr class="w481 w961 w1799"></wbr>scheduling everything else we know we have to do, <wbr class="w480 w960 w1800"></wbr>including laundry, cooking, <wbr class="w481 w961 w1799"></wbr>cleaning up afterwards, <wbr class="w480 w960"></wbr>eating, travelling, working out, walking the dog, visiting <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>friends and so on. People soon realise there is a lot less <wbr class="w480 w960"></wbr>unstructured time than we <wbr class="w481 w961 w1799"></wbr>first imagined. Fiore also <wbr class="w480 w960 w1800"></wbr>recommends scheduling time for fun; otherwise, we feel <wbr class="w480 w481 w960 w961 w1799"></wbr>stretched and overworked because relaxation gets <wbr class="w480 w960 w1800"></wbr>missed from our busy days.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">O</span>nce your un-schedule is complete, you will soon <wbr class="w480"></wbr>realise <wbr class="w960"></wbr>that instead of visualising <wbr class="w481 w961 w1799"></wbr>large, unfettered <wbr class="w480"></wbr>blocks of <wbr class="w960 w1800"></wbr>time in which to write your novel, you must <wbr class="w480"></wbr>instead <wbr class="w960"></wbr>build <wbr class="w481 w961 w1799"></wbr>more margin around the edges, segment <wbr class="w480"></wbr>tasks into <wbr class="w960 w1800"></wbr>15-minute blocks and steal time <wbr class="w481 w961 w1799"></wbr>wherever <wbr class="w480"></wbr>possible.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="055390a0-262c-4454-a966-f17eb9db86e3" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-055390a0-262c-4454-a966-f17eb9db86e3"><div kind="group" index="column" class="group column group column" id="u-055390a0-262c-4454-a966-f17eb9db86e3-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-055390a0-262c-4454-a966-f17eb9db86e3-g-column-t-paragraph"><p><span class="first-letter">M</span>ichael Hyatt is a life coach and claims we can shave 10 <wbr class="w480 w960"></wbr>hours off our work week. <wbr class="w481 w1799"></wbr>His <wbr class="w961"></wbr>four strategies include: <wbr class="w480 w960 w1800"></wbr>boosting your energy, guarding your time, sharpening <wbr class="w480 w481 w960 w1799"></wbr>your <wbr class="w961"></wbr>focus and flexing your &#x2018;no&#x2019; muscle. Working long <wbr class="w480 w960 w1800"></wbr>hours use to be a badge of <wbr class="w481 w1799"></wbr>honour, <wbr class="w961"></wbr>we now realise it is a <wbr class="w480 w960"></wbr>fast track to burnout. Getting a good night&#x2019;s sleep, <wbr class="w481 w1799 w1800"></wbr>being <wbr class="w480 w960 w961"></wbr>physically active, staying positive, planning your day, <wbr class="w480 w960"></wbr>choosing focus over <wbr class="w481 w961 w1799"></wbr>multitasking, batching tasks <wbr class="w1800"></wbr>and <wbr class="w480 w960"></wbr>automating &#x2018;no&#x2019; are all strategies Michael <wbr class="w481 w961 w1799"></wbr>recommends <wbr class="w480 w960"></wbr>to build more margin into our work week.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">R</span>ichard Svensson argues in his book <a href="http://amzn.to/1OueJPJ" data-href="http://amzn.to/1OueJPJ"><em>Margin: Restoring <wbr class="w480 w960"></wbr>Emotional, Physical, <wbr class="w1799"></wbr>Financial, <wbr class="w481 w961"></wbr>and Time Reserves to <wbr class="w480 w960 w1800"></wbr>Overloaded Lives</em></a>, that without an indicator light, we <wbr class="w480 w960 w1799"></wbr>don&#x2019;t <wbr class="w481 w961"></wbr>accurately gauge our capacities. We fill our <wbr class="w480 w960 w1800"></wbr>schedules uncritically, and we <wbr class="w1799"></wbr>overbook <wbr class="w481 w961"></wbr>ourselves. We <wbr class="w480 w960"></wbr>need to build space between our load and our limits. We <wbr class="w480 w960 w1799 w1800"></wbr>must hold <wbr class="w481 w961"></wbr>something in reserve for contingencies.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19"><div kind="group" index="column" class="group column group column" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-063c8ad9-7f1a-4e2c-8a1d-a0e1ed6bec19-g-column-t-paragraph"><p><span class="first-letter">T</span>he combination of portable devices and technology <wbr class="w480 w960"></wbr>make it impossible to <wbr class="w481 w961 w1799"></wbr>disconnect fully. The modern <wbr class="w480 w960 w1800"></wbr>streamlined workforce requires &#x2018;more for less&#x2019;, <wbr class="w1799"></wbr>meaning <wbr class="w480 w481 w960 w961"></wbr>we are busier and more overworked than ever. Society <wbr class="w480 w960 w1800"></wbr>views busyness as a <wbr class="w1799"></wbr>badge of <wbr class="w481 w961"></wbr>honour. Bosses send <wbr class="w480 w960"></wbr>emails to staff on Christmas Eve to show how <wbr class="w1799"></wbr>dedicated <wbr class="w480 w960 w1800"></wbr>they <wbr class="w481 w961"></wbr>are to working right up until holidays. We take our <wbr class="w480 w960"></wbr>laptops to coffee <wbr class="w1799"></wbr>shops, mobile <wbr class="w481 w961"></wbr>devices on cruise ships <wbr class="w480 w960 w1800"></wbr>and parents go back to work as soon as they <wbr class="w1799"></wbr>are able, <wbr class="w480 w481 w960 w961"></wbr>squeezing family time into a few hours at night.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i last_chapter w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text stack mixed" itemid="a2fe976b-bf21-44fe-aa14-0138b44fcdfa" itemtype="image" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa"><div kind="group" index="mixed" class="group mixed group mixed" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="693" max-height="400" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-m-cover"><picture id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9e880186a090e8cfb3161db6213b969a/insta_brannan.jpg?height=223&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/749550c597c77b6b8cbfe9712bb2bd43/insta_brannan.jpg?height=333&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/afefbfdc02d77eefbe7199cd1aa0b1b2/insta_brannan.jpg?height=223&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/7357ccfc2ca4be8a583376e0d7c8f2ca/insta_brannan.jpg?height=333&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/772739c935eeeceb086783e756ec33a9/insta_brannan.jpg?height=400&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F18442a5c645cb3ad7be84058505b97a87d3a9e07.jpg&width=693 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration medium medium_paragraph medium_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-a2fe976b-bf21-44fe-aa14-0138b44fcdfa-g-mixed-t-paragraph"><p><span class="first-letter">I</span>t is easy to blame our jobs, families and society as the <wbr class="w480 w960"></wbr>reason we are so busy, but in <wbr class="w481 w961 w1799"></wbr>the end, it is up to <wbr class="w480 w960 w1800"></wbr>individuals to set their limits. For many, it is a paradigm <wbr class="w480 w960"></wbr>shift to <wbr class="w481 w961 w1799"></wbr>slow down, say no, or not do it all. To replace <wbr class="w480 w960 w1800"></wbr>manic multitasking with Zen-like focus <wbr class="w481 w961 w1799"></wbr>is to many, <wbr class="w480 w960"></wbr>myself included, a complete personality overhaul, but it <wbr class="w480 w960"></wbr>is <wbr class="w1800"></wbr>possible. Our <wbr class="w481 w961 w1799"></wbr>attitude toward stress and dizziness is a <wbr class="w480 w960"></wbr>choice. Once you take ownership of that <wbr class="w481 w961 w1799"></wbr>concept, life <wbr class="w480 w960 w1800"></wbr>can be very different.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-alternate-g-heading-t-headline-a">Creativity Fitness feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_subtitle w_title w_quote w_text w_separator w_decoration w_leader w_short_subtitle w_short_title w_short_quote w_short_text w_icon w_paragraph w_long_paragraph w_long_text w_cover w_media w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-desktop-l-one-3-l-one"></div><style id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-color">body{background-color: rgba(32, 22, 21, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_subtitle w_title w_quote w_text w_separator w_decoration w_leader w_short_subtitle w_short_title w_short_quote w_short_text w_icon w_paragraph w_long_paragraph w_long_text w_cover w_media w_trailer media_gte_narrow media_lt_half media_lt_wide media_lt_full media_landscape crop_true w_medium_paragraph w_medium_text layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-cinema-l-one-3-l-one"></div><style id="u-b209f99a-33e1-4eb6-b18f-c5daa1704b4a-color">body{background-color: rgba(32, 22, 21, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1906,7 +1970,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1933,40 +1997,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -1975,19 +2068,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -2135,11 +2216,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -2148,6 +2231,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -2160,79 +2245,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2256,29 +2556,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2297,14 +2600,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2319,7 +2622,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
